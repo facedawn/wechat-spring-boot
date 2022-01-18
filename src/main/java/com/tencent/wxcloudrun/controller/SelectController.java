@@ -22,6 +22,7 @@ public class SelectController {
     @GetMapping("/select")
     public List<DataReturnVo> selectAll(@RequestParam("pid")int pid)
     {
+        if(pid==0)return null;
         return selectService.selectAll(pid);
     }
 }
