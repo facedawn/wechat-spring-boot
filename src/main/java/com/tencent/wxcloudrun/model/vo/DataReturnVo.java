@@ -13,4 +13,13 @@ public class DataReturnVo {
     String type;
     String rmb;
     String date;
+
+
+    public DataReturnVo(DataReturnVo dataReturnVo) {
+        this.num=dataReturnVo.getNum();
+        this.name=dataReturnVo.getName();
+        this.type=dataReturnVo.getType();
+        this.rmb=dataReturnVo.getRmb();
+        this.date=dataReturnVo.getDate();
+    }
 }

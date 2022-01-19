@@ -19,10 +19,29 @@ public class SelectController {
     @Autowired
     SelectService selectService;
 
+   public void sort(List<DataReturnVo> dataReturnVoList)
+   {
+       int len=dataReturnVoList.size();
+       for(int i=0;i<len;i++)
+       {
+           for(int j=i+1;j<len;j++)
+           {
+               if(dataReturnVoList.get(i).getDate().compareTo(dataReturnVoList.get(j).getDate())>0)
+               {
+                   DataReturnVo temp=new DataReturnVo(dataReturnVoList.get(i));
+                   dataReturnVoList.set(i,new DataReturnVo(dataReturnVoList.get(j)));
+                   dataReturnVoList.set(j,new DataReturnVo(temp));
+               }
+           }
+       }
+   }
+
     @GetMapping("/select")
     public List<DataReturnVo> selectAll(@RequestParam("pid")String pid)
     {
         if(pid==null)return null;
-        return selectService.selectAll(pid);
+        List<DataReturnVo> dataReturnVoList=selectService.selectAll(pid);
+        sort(dataReturnVoList);
+        return dataReturnVoList;
     }
 }
