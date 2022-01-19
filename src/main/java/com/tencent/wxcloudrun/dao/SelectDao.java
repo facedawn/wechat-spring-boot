@@ -15,7 +15,7 @@ public class SelectDao {
     @Autowired
     DataPoMapper dataPoMapper;
 
-    public List<DataReturnVo> selectAllByPid(int pid){
+    public List<DataReturnVo> selectAllByPid(String pid){
         DataPoExample dataPoExample=new DataPoExample();
         DataPoExample.Criteria criteria=dataPoExample.createCriteria();
         criteria.andPidEqualTo(pid);

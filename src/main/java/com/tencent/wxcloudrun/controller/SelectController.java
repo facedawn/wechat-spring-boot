@@ -20,9 +20,9 @@ public class SelectController {
     SelectService selectService;
 
     @GetMapping("/select")
-    public List<DataReturnVo> selectAll(@RequestParam("pid")int pid)
+    public List<DataReturnVo> selectAll(@RequestParam("pid")String pid)
     {
-        if(pid==0)return null;
+        if(pid==null)return null;
         return selectService.selectAll(pid);
     }
 }

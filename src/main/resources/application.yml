@@ -5,6 +5,8 @@ server:
 spring:
   datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      max-lifetime: 120000
     url: jdbc:mysql://sh-cynosdbmysql-grp-bo1kows2.sql.tencentcdb.com:28386/springboot_demo
     username: root
     password: S)sy%!v7

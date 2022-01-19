@@ -12,7 +12,7 @@ public class SelectService {
     @Autowired
     SelectDao selectDao;
 
-    public List<DataReturnVo> selectAll(int pid)
+    public List<DataReturnVo> selectAll(String pid)
     {
         return selectDao.selectAllByPid(pid);
     }

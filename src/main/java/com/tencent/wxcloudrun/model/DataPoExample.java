@@ -194,63 +194,63 @@ public class DataPoExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andPidIsNull() {
-            addCriterion("`pid` is null");
+        public Criteria andIdIsNull() {
+            addCriterion("`id` is null");
             return (Criteria) this;
         }
 
-        public Criteria andPidIsNotNull() {
-            addCriterion("`pid` is not null");
+        public Criteria andIdIsNotNull() {
+            addCriterion("`id` is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPidEqualTo(Integer value) {
-            addCriterion("`pid` =", value, "pid");
+        public Criteria andIdEqualTo(Integer value) {
+            addCriterion("`id` =", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andPidNotEqualTo(Integer value) {
-            addCriterion("`pid` <>", value, "pid");
+        public Criteria andIdNotEqualTo(Integer value) {
+            addCriterion("`id` <>", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andPidGreaterThan(Integer value) {
-            addCriterion("`pid` >", value, "pid");
+        public Criteria andIdGreaterThan(Integer value) {
+            addCriterion("`id` >", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andPidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("`pid` >=", value, "pid");
+        public Criteria andIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("`id` >=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andPidLessThan(Integer value) {
-            addCriterion("`pid` <", value, "pid");
+        public Criteria andIdLessThan(Integer value) {
+            addCriterion("`id` <", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andPidLessThanOrEqualTo(Integer value) {
-            addCriterion("`pid` <=", value, "pid");
+        public Criteria andIdLessThanOrEqualTo(Integer value) {
+            addCriterion("`id` <=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andPidIn(List<Integer> values) {
-            addCriterion("`pid` in", values, "pid");
+        public Criteria andIdIn(List<Integer> values) {
+            addCriterion("`id` in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andPidNotIn(List<Integer> values) {
-            addCriterion("`pid` not in", values, "pid");
+        public Criteria andIdNotIn(List<Integer> values) {
+            addCriterion("`id` not in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andPidBetween(Integer value1, Integer value2) {
-            addCriterion("`pid` between", value1, value2, "pid");
+        public Criteria andIdBetween(Integer value1, Integer value2) {
+            addCriterion("`id` between", value1, value2, "id");
             return (Criteria) this;
         }
 
-        public Criteria andPidNotBetween(Integer value1, Integer value2) {
-            addCriterion("`pid` not between", value1, value2, "pid");
+        public Criteria andIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("`id` not between", value1, value2, "id");
             return (Criteria) this;
         }
 
@@ -264,52 +264,62 @@ public class DataPoExample {
             return (Criteria) this;
         }
 
-        public Criteria andNumEqualTo(Integer value) {
+        public Criteria andNumEqualTo(String value) {
             addCriterion("`num` =", value, "num");
             return (Criteria) this;
         }
 
-        public Criteria andNumNotEqualTo(Integer value) {
+        public Criteria andNumNotEqualTo(String value) {
             addCriterion("`num` <>", value, "num");
             return (Criteria) this;
         }
 
-        public Criteria andNumGreaterThan(Integer value) {
+        public Criteria andNumGreaterThan(String value) {
             addCriterion("`num` >", value, "num");
             return (Criteria) this;
         }
 
-        public Criteria andNumGreaterThanOrEqualTo(Integer value) {
+        public Criteria andNumGreaterThanOrEqualTo(String value) {
             addCriterion("`num` >=", value, "num");
             return (Criteria) this;
         }
 
-        public Criteria andNumLessThan(Integer value) {
+        public Criteria andNumLessThan(String value) {
             addCriterion("`num` <", value, "num");
             return (Criteria) this;
         }
 
-        public Criteria andNumLessThanOrEqualTo(Integer value) {
+        public Criteria andNumLessThanOrEqualTo(String value) {
             addCriterion("`num` <=", value, "num");
             return (Criteria) this;
         }
 
-        public Criteria andNumIn(List<Integer> values) {
+        public Criteria andNumLike(String value) {
+            addCriterion("`num` like", value, "num");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumNotLike(String value) {
+            addCriterion("`num` not like", value, "num");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumIn(List<String> values) {
             addCriterion("`num` in", values, "num");
             return (Criteria) this;
         }
 
-        public Criteria andNumNotIn(List<Integer> values) {
+        public Criteria andNumNotIn(List<String> values) {
             addCriterion("`num` not in", values, "num");
             return (Criteria) this;
         }
 
-        public Criteria andNumBetween(Integer value1, Integer value2) {
+        public Criteria andNumBetween(String value1, String value2) {
             addCriterion("`num` between", value1, value2, "num");
             return (Criteria) this;
         }
 
-        public Criteria andNumNotBetween(Integer value1, Integer value2) {
+        public Criteria andNumNotBetween(String value1, String value2) {
             addCriterion("`num` not between", value1, value2, "num");
             return (Criteria) this;
         }
@@ -521,6 +531,146 @@ public class DataPoExample {
 
         public Criteria andAddressNotBetween(String value1, String value2) {
             addCriterion("`address` not between", value1, value2, "address");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidIsNull() {
+            addCriterion("`pid` is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidIsNotNull() {
+            addCriterion("`pid` is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidEqualTo(String value) {
+            addCriterion("`pid` =", value, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidNotEqualTo(String value) {
+            addCriterion("`pid` <>", value, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidGreaterThan(String value) {
+            addCriterion("`pid` >", value, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidGreaterThanOrEqualTo(String value) {
+            addCriterion("`pid` >=", value, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidLessThan(String value) {
+            addCriterion("`pid` <", value, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidLessThanOrEqualTo(String value) {
+            addCriterion("`pid` <=", value, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidLike(String value) {
+            addCriterion("`pid` like", value, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidNotLike(String value) {
+            addCriterion("`pid` not like", value, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidIn(List<String> values) {
+            addCriterion("`pid` in", values, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidNotIn(List<String> values) {
+            addCriterion("`pid` not in", values, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidBetween(String value1, String value2) {
+            addCriterion("`pid` between", value1, value2, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andPidNotBetween(String value1, String value2) {
+            addCriterion("`pid` not between", value1, value2, "pid");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeIsNull() {
+            addCriterion("`attribute` is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeIsNotNull() {
+            addCriterion("`attribute` is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeEqualTo(String value) {
+            addCriterion("`attribute` =", value, "attribute");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeNotEqualTo(String value) {
+            addCriterion("`attribute` <>", value, "attribute");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeGreaterThan(String value) {
+            addCriterion("`attribute` >", value, "attribute");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeGreaterThanOrEqualTo(String value) {
+            addCriterion("`attribute` >=", value, "attribute");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeLessThan(String value) {
+            addCriterion("`attribute` <", value, "attribute");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeLessThanOrEqualTo(String value) {
+            addCriterion("`attribute` <=", value, "attribute");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeLike(String value) {
+            addCriterion("`attribute` like", value, "attribute");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeNotLike(String value) {
+            addCriterion("`attribute` not like", value, "attribute");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeIn(List<String> values) {
+            addCriterion("`attribute` in", values, "attribute");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeNotIn(List<String> values) {
+            addCriterion("`attribute` not in", values, "attribute");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeBetween(String value1, String value2) {
+            addCriterion("`attribute` between", value1, value2, "attribute");
+            return (Criteria) this;
+        }
+
+        public Criteria andAttributeNotBetween(String value1, String value2) {
+            addCriterion("`attribute` not between", value1, value2, "attribute");
             return (Criteria) this;
         }
 
