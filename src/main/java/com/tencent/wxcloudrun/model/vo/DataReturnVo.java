@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DataReturnVo {
     int num;
+    String account;
     String name;
     String type;
     String rmb;
@@ -16,6 +17,7 @@ public class DataReturnVo {
 
 
     public DataReturnVo(DataReturnVo dataReturnVo) {
+        this.account=dataReturnVo.getAccount();
         this.num=dataReturnVo.getNum();
         this.name=dataReturnVo.getName();
         this.type=dataReturnVo.getType();
